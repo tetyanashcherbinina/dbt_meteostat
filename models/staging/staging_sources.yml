@@ -22,6 +22,21 @@ sources:
       - name: regions
         identifier: regions_2
 
+  - name: northwind_data
+    schema: s_tetyanashcherbinina
+    tables:
+      - name: orders
+        identifier: northwind_orders_1
+
+      - name: order_details
+        identifier: northwind_order_details_1
+
+      - name: products
+        identifier: northwind_products_1
+        
+      - name: categories
+        identifier: northwind_categories_1
+
 # This is for documentation purposes, ALWAYS DOCUMENT!
 models:
   - name: stg_weather_daily
