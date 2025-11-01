@@ -1,0 +1,28 @@
+version: 2
+models:
+  - name: mart_airport_stats
+    description: "Aggregated airport-level flight statistics"
+    columns:
+      - name: airport_code
+        description: "IATA airport code"
+      - name: total_flights
+        description: "Total number of flights (departures + arrivals)"
+  - name: mart_sales_performance
+    description: "Aggregated sales performance by month and product category"
+    columns:
+       - name: order_year
+         description: "The year when the order was placed"
+         tests: [not_null]
+       - name: order_month
+         description: "The month when the order was placed"
+         tests: [not_null]
+       - name: category_name
+         description: "Name of the product category"
+         tests: [not_null]
+       - name: total_revenue
+         description: "Total revenue in the given year, month, and category"
+       - name: number_of_orders
+         description: "Total number of unique orders in the given year, month, and category"
+         tests: [not_null]
+       - name: average_revenue
+         description: "Average revenue per order"
